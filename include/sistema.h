@@ -13,8 +13,12 @@ private:
 	vector<Servidor> servers; //Vetor que armazena todos os servidores.
 	vector<Usuario> usuarios; //Vetor que armazena os usuários cadastrados.
 	map<int,pair<string,string>> usuarios_logados; //Vetor que armazena os usuários que logaram no sistema.
+	void salvarUsuarios();
+    void salvarServidores();
 
 public:
+
+	void salvar();
 	/**
 	 * @brief Função que termina o programa.
 	 * @return uma string que anuncia o encerramento do programa.

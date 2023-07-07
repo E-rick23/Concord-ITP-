@@ -3,6 +3,7 @@
 #include <algorithm>
 #include <vector>
 #include <regex>
+#include <fstream>
 #include "sistema.h"
 #include "servidor.h"
 #include "usuario.h"
@@ -286,6 +287,26 @@ string Sistema::list_users()
 		}
 	}
 	return ss.str();
+}
+
+void Sistema::salvarUsuarios()
+{	
+	ofstream myfile;
+	myfile.open("usuarios.txt", std::ios_base::app);
+	
+	stringstream ss;
+	int count = 0;
+	for (auto& user : this->usuarios){
+		count++;
+	}
+	myfile << "Total de usuários registrados: "<< count << endl;
+	for (auto& user : this->usuarios) {
+		myfile << user.get_id() << endl << user.get_nome() << endl << user.get_email() << endl << user.get_senha() << endl;
+	}
+}
+
+void Sistema::salvar(){
+	salvarUsuarios();
 }
 
 string Sistema::list_channels(int id)

@@ -26,6 +26,11 @@ string Usuario::get_email()
 	return this->email;
 }
 
+string Usuario::get_senha()
+{
+	return this->senha;
+}
+
 bool Usuario::same_pw(string linha)
 {
 	return this->senha == linha;

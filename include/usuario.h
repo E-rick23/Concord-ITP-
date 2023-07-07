@@ -28,6 +28,7 @@ public:
 	int get_id();
 	string get_nome();
 	string get_email();
+	string get_senha();
 
 	/**
 	 * @param senha que será verificada

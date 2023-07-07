@@ -39,6 +39,9 @@ string principal::processar_linha(string linha)
 		this->sair = true;
 		return sistema->quit();
 	}
+	else if(Cchooser == "salvar"){
+		 sistema->salvar();
+	}
 	else if (Cchooser == "help") {
 		return sistema->help();
 	}
