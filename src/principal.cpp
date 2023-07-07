@@ -41,6 +41,7 @@ string principal::processar_linha(string linha)
 	}
 	else if(Cchooser == "salvar"){
 		 sistema->salvar();
+		 return "Arquivos de servidores e usuários salvos!";
 	}
 	else if (Cchooser == "help") {
 		return sistema->help();
@@ -68,7 +69,7 @@ string principal::processar_linha(string linha)
 
 	int id;
 	if (!(buf >> id)) {
-		return ">>>Comando precisa ser precedido de um ID [" + Cchooser + "]...";
+		return "Este comando precisa ser precedido de um ID [" + Cchooser + "]...";
 	}
 
 	if (Cchooser == "disconnect") {

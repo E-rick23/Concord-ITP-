@@ -293,20 +293,36 @@ void Sistema::salvarUsuarios()
 {	
 	ofstream myfile;
 	myfile.open("usuarios.txt", std::ios_base::app);
-	
-	stringstream ss;
+
 	int count = 0;
 	for (auto& user : this->usuarios){
 		count++;
 	}
-	myfile << "Total de usuários registrados: "<< count << endl;
+	myfile << "Total de usuários registrados: " << count << endl;
 	for (auto& user : this->usuarios) {
 		myfile << user.get_id() << endl << user.get_nome() << endl << user.get_email() << endl << user.get_senha() << endl;
 	}
 }
 
+void Sistema::salvarServidores()
+{
+	ofstream myfile;
+	myfile.open("servidores.txt", std::ios_base::app);
+
+	int count = 0;
+	for (auto& server : this->servers){
+		count++;
+	}
+	myfile << "Total de servidores registrados: " << count << endl;
+
+	for (auto& server : this->servers) {
+		myfile << server.get_usuario_dono_id() << endl << server.get_nome() << endl << server.get_descricao() << endl << server.get_convite() << endl;
+	} 
+}
+
 void Sistema::salvar(){
 	salvarUsuarios();
+	salvarServidores();
 }
 
 string Sistema::list_channels(int id)
