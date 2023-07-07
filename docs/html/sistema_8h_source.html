@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Concord: Código-Fonte de include/sistema.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Concord
+   &#160;<span id="projectnumber">v0.2</span>
+   </div>
+   <div id="projectbrief">Aplicativo de mensagens Concord!</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Busca','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('sistema_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">sistema.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="sistema_8h.html">Vá para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef SISTEMA_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define SISTEMA_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="usuario_8h.html">usuario.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="servidor_8h.html">servidor.h</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_sistema.html">   11</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_sistema.html">Sistema</a> {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_sistema.html#ae78d572bce86f2bdc1b2a51d1ef290df">   13</a></span>&#160;    vector&lt;Servidor&gt; <a class="code" href="class_sistema.html#ae78d572bce86f2bdc1b2a51d1ef290df">servers</a>; <span class="comment">//Vetor que armazena todos os servidores.</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_sistema.html#abb256581959e67fa9018bbbb7dee158f">   14</a></span>&#160;    vector&lt;Usuario&gt; <a class="code" href="class_sistema.html#abb256581959e67fa9018bbbb7dee158f">usuarios</a>; <span class="comment">//Vetor que armazena os usuários cadastrados.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_sistema.html#a5a4a1bd7139adcfb28f9a9e5b45a9ed9">   15</a></span>&#160;    map&lt;int,pair&lt;string,string&gt;&gt; <a class="code" href="class_sistema.html#a5a4a1bd7139adcfb28f9a9e5b45a9ed9">usuarios_logados</a>; <span class="comment">//Vetor que armazena os usuários que logaram no sistema.</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">string</span> quit();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">string</span> help();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">string</span> create_user(<span class="keyword">const</span> <span class="keywordtype">string</span> email, <span class="keyword">const</span> <span class="keywordtype">string</span> senha, <span class="keyword">const</span> <span class="keywordtype">string</span> nome);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">string</span> login(<span class="keyword">const</span> <span class="keywordtype">string</span> email, <span class="keyword">const</span> <span class="keywordtype">string</span> senha);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">string</span> disconnect(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">string</span> create_server(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keyword">const</span> <span class="keywordtype">string</span> nome);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">string</span> set_server_invite_code(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keyword">const</span> <span class="keywordtype">string</span> nome, <span class="keyword">const</span> <span class="keywordtype">string</span> codigo);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">string</span> set_server_desc(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keyword">const</span> <span class="keywordtype">string</span> nome, <span class="keyword">const</span> <span class="keywordtype">string</span> descricao);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordtype">string</span> list_servers(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordtype">string</span> remove_server(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keyword">const</span> <span class="keywordtype">string</span> nome);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordtype">string</span> enter_server(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keyword">const</span> <span class="keywordtype">string</span> nome, <span class="keyword">const</span> <span class="keywordtype">string</span> codigo);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keywordtype">string</span> leave_server(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keyword">const</span> <span class="keywordtype">string</span> nome);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keywordtype">string</span> list_participants(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="keywordtype">string</span> list_users();</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    </div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="keywordtype">string</span> list_channels(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160; </div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keywordtype">string</span> create_channel(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keyword">const</span> <span class="keywordtype">string</span> nome);</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; </div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="keywordtype">string</span> enter_channel(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keyword">const</span> <span class="keywordtype">string</span> nome);</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160; </div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keywordtype">string</span> leave_channel(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160; </div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="keywordtype">string</span> send_message(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keyword">const</span> <span class="keywordtype">string</span> mensagem);</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    </div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <span class="keywordtype">string</span> list_messages(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;};</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160; </div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclass_sistema_html"><div class="ttname"><a href="class_sistema.html">Sistema</a></div><div class="ttdef"><b>Definition:</b> <a href="sistema_8h_source.html#l00011">sistema.h:11</a></div></div>
+<div class="ttc" id="aclass_sistema_html_a5a4a1bd7139adcfb28f9a9e5b45a9ed9"><div class="ttname"><a href="class_sistema.html#a5a4a1bd7139adcfb28f9a9e5b45a9ed9">Sistema::usuarios_logados</a></div><div class="ttdeci">map&lt; int, pair&lt; string, string &gt; &gt; usuarios_logados</div><div class="ttdef"><b>Definition:</b> <a href="sistema_8h_source.html#l00015">sistema.h:15</a></div></div>
+<div class="ttc" id="aclass_sistema_html_abb256581959e67fa9018bbbb7dee158f"><div class="ttname"><a href="class_sistema.html#abb256581959e67fa9018bbbb7dee158f">Sistema::usuarios</a></div><div class="ttdeci">vector&lt; Usuario &gt; usuarios</div><div class="ttdef"><b>Definition:</b> <a href="sistema_8h_source.html#l00014">sistema.h:14</a></div></div>
+<div class="ttc" id="aclass_sistema_html_ae78d572bce86f2bdc1b2a51d1ef290df"><div class="ttname"><a href="class_sistema.html#ae78d572bce86f2bdc1b2a51d1ef290df">Sistema::servers</a></div><div class="ttdeci">vector&lt; Servidor &gt; servers</div><div class="ttdef"><b>Definition:</b> <a href="sistema_8h_source.html#l00013">sistema.h:13</a></div></div>
+<div class="ttc" id="aservidor_8h_html"><div class="ttname"><a href="servidor_8h.html">servidor.h</a></div></div>
+<div class="ttc" id="ausuario_8h_html"><div class="ttname"><a href="usuario_8h.html">usuario.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="sistema_8h.html">sistema.h</a></li>
+    <li class="footer">Gerado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

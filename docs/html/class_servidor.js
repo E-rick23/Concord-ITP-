@@ -1,0 +1,26 @@
+var class_servidor =
+[
+    [ "Servidor", "class_servidor.html#aae560fda82b724e1e17e2eb9eb3618fa", null ],
+    [ "add_canal_texto", "class_servidor.html#af3f1a41de953b011b27e8eda8a647851", null ],
+    [ "add_participante", "class_servidor.html#a965c1ff6ad715b7a954d2f4a647fffdd", null ],
+    [ "eh_canal_texto", "class_servidor.html#ac8a9d5460f5561fc0d4637f5a1d2f13a", null ],
+    [ "eh_participante", "class_servidor.html#a81d0a2cf0c89ea7d149b7680eb1054e2", null ],
+    [ "enviar_mensagem", "class_servidor.html#a077796073bf2965e8f2fd3e4f47e9e39", null ],
+    [ "get_convite", "class_servidor.html#ab659017497169b3ed174bc64bd51b333", null ],
+    [ "get_descricao", "class_servidor.html#a387616f464c0297ba3c1e1b6c73ea698", null ],
+    [ "get_nome", "class_servidor.html#a9b2192f2258148459a5581676ba5ff9a", null ],
+    [ "get_usuario_dono_id", "class_servidor.html#a96cc54e000b5da7220a9e0c87928b323", null ],
+    [ "imprimir_canais_texto", "class_servidor.html#a3e55a302892c9400a97fbb6ac6351623", null ],
+    [ "imprimir_mensagens", "class_servidor.html#a747ed8fd2865304ba0348ba09461a9d9", null ],
+    [ "imprimir_participantes", "class_servidor.html#a939f1096c3c79cecaae700dabc34cce1", null ],
+    [ "remove_canal_texto", "class_servidor.html#a5f1a34e56284f75055f1a943ef1d29a9", null ],
+    [ "remove_participante", "class_servidor.html#a23bf5d37bcdc30a46b1e85469ccabdae", null ],
+    [ "set_convite", "class_servidor.html#a2c4f35ae9689728f39a40621a5d24bfb", null ],
+    [ "set_descricao", "class_servidor.html#a0e26b2a2dd87fc77ccda01b6d8eebca3", null ],
+    [ "canais_texto", "class_servidor.html#a939253ac052d53d27b211231534e58d9", null ],
+    [ "convite", "class_servidor.html#a5e779500fff7d375d07130bd9e12e906", null ],
+    [ "descricao", "class_servidor.html#ac835192fb099563bd7248b2594be796d", null ],
+    [ "nome", "class_servidor.html#afe5b8d9c020be2cdea189f3aa5958b2d", null ],
+    [ "participantes_id", "class_servidor.html#a17680d994581e2bfb15aae2d4279b95c", null ],
+    [ "usuario_dono_id", "class_servidor.html#af617e27b21d1ee55adc5ec214f447733", null ]
+];
