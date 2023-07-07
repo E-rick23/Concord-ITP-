@@ -74,7 +74,8 @@ string Sistema::help()
 					"enter-channel <id> - Entra em um canal existente.\n --- "
 					"leave-channel <id> - Sai do canal.\n --- "
 					"send-message <id> <mensagem> - Envia uma mensagem no canal atual.\n --- "
-					"list-messages <id> - Lista todas as mensagens do canal.\n\n"
+					"list-messages <id> - Lista todas as mensagens do canal.\n"
+					"salvar - Salve os usuários e servidores registrados em arquivos.\n\n"
 					"___________________________________________________\n";
 	return helpmi;
 }

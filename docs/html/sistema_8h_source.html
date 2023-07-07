@@ -1,9 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.7"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Concord: Código-Fonte de include/sistema.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -23,10 +23,9 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Concord
-   &#160;<span id="projectnumber">v0.2</span>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Concord<span id="projectnumber">&#160;v0.3</span>
    </div>
    <div id="projectbrief">Aplicativo de mensagens Concord!</div>
   </td>
@@ -35,21 +34,22 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Gerado por Doxygen 1.9.1 -->
+<!-- Gerado por Doxygen 1.9.7 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'Busca','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','Busca');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
@@ -63,7 +63,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(document).ready(function(){initNavTree('sistema_8h_source.html',''); initResizable(); });
 /* @license-end */
 </script>
@@ -77,79 +77,112 @@ $(document).ready(function(){initNavTree('sistema_8h_source.html',''); initResiz
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="header">
-  <div class="headertitle">
-<div class="title">sistema.h</div>  </div>
+  <div class="headertitle"><div class="title">sistema.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="sistema_8h.html">Vá para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef SISTEMA_H</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define SISTEMA_H</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="usuario_8h.html">usuario.h</a>&quot;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="servidor_8h.html">servidor.h</a>&quot;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">using namespace </span>std;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_sistema.html">   11</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_sistema.html">Sistema</a> {</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_sistema.html#ae78d572bce86f2bdc1b2a51d1ef290df">   13</a></span>&#160;    vector&lt;Servidor&gt; <a class="code" href="class_sistema.html#ae78d572bce86f2bdc1b2a51d1ef290df">servers</a>; <span class="comment">//Vetor que armazena todos os servidores.</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_sistema.html#abb256581959e67fa9018bbbb7dee158f">   14</a></span>&#160;    vector&lt;Usuario&gt; <a class="code" href="class_sistema.html#abb256581959e67fa9018bbbb7dee158f">usuarios</a>; <span class="comment">//Vetor que armazena os usuários cadastrados.</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_sistema.html#a5a4a1bd7139adcfb28f9a9e5b45a9ed9">   15</a></span>&#160;    map&lt;int,pair&lt;string,string&gt;&gt; <a class="code" href="class_sistema.html#a5a4a1bd7139adcfb28f9a9e5b45a9ed9">usuarios_logados</a>; <span class="comment">//Vetor que armazena os usuários que logaram no sistema.</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">string</span> quit();</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">string</span> help();</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">string</span> create_user(<span class="keyword">const</span> <span class="keywordtype">string</span> email, <span class="keyword">const</span> <span class="keywordtype">string</span> senha, <span class="keyword">const</span> <span class="keywordtype">string</span> nome);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">string</span> login(<span class="keyword">const</span> <span class="keywordtype">string</span> email, <span class="keyword">const</span> <span class="keywordtype">string</span> senha);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">string</span> disconnect(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">string</span> create_server(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keyword">const</span> <span class="keywordtype">string</span> nome);</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">string</span> set_server_invite_code(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keyword">const</span> <span class="keywordtype">string</span> nome, <span class="keyword">const</span> <span class="keywordtype">string</span> codigo);</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">string</span> set_server_desc(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keyword">const</span> <span class="keywordtype">string</span> nome, <span class="keyword">const</span> <span class="keywordtype">string</span> descricao);</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordtype">string</span> list_servers(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordtype">string</span> remove_server(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keyword">const</span> <span class="keywordtype">string</span> nome);</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordtype">string</span> enter_server(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keyword">const</span> <span class="keywordtype">string</span> nome, <span class="keyword">const</span> <span class="keywordtype">string</span> codigo);</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keywordtype">string</span> leave_server(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keyword">const</span> <span class="keywordtype">string</span> nome);</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keywordtype">string</span> list_participants(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="keywordtype">string</span> list_users();</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    </div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="keywordtype">string</span> list_channels(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160; </div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keywordtype">string</span> create_channel(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keyword">const</span> <span class="keywordtype">string</span> nome);</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; </div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="keywordtype">string</span> enter_channel(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keyword">const</span> <span class="keywordtype">string</span> nome);</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160; </div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keywordtype">string</span> leave_channel(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160; </div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="keywordtype">string</span> send_message(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keyword">const</span> <span class="keywordtype">string</span> mensagem);</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    </div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <span class="keywordtype">string</span> list_messages(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;};</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160; </div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclass_sistema_html"><div class="ttname"><a href="class_sistema.html">Sistema</a></div><div class="ttdef"><b>Definition:</b> <a href="sistema_8h_source.html#l00011">sistema.h:11</a></div></div>
-<div class="ttc" id="aclass_sistema_html_a5a4a1bd7139adcfb28f9a9e5b45a9ed9"><div class="ttname"><a href="class_sistema.html#a5a4a1bd7139adcfb28f9a9e5b45a9ed9">Sistema::usuarios_logados</a></div><div class="ttdeci">map&lt; int, pair&lt; string, string &gt; &gt; usuarios_logados</div><div class="ttdef"><b>Definition:</b> <a href="sistema_8h_source.html#l00015">sistema.h:15</a></div></div>
-<div class="ttc" id="aclass_sistema_html_abb256581959e67fa9018bbbb7dee158f"><div class="ttname"><a href="class_sistema.html#abb256581959e67fa9018bbbb7dee158f">Sistema::usuarios</a></div><div class="ttdeci">vector&lt; Usuario &gt; usuarios</div><div class="ttdef"><b>Definition:</b> <a href="sistema_8h_source.html#l00014">sistema.h:14</a></div></div>
-<div class="ttc" id="aclass_sistema_html_ae78d572bce86f2bdc1b2a51d1ef290df"><div class="ttname"><a href="class_sistema.html#ae78d572bce86f2bdc1b2a51d1ef290df">Sistema::servers</a></div><div class="ttdeci">vector&lt; Servidor &gt; servers</div><div class="ttdef"><b>Definition:</b> <a href="sistema_8h_source.html#l00013">sistema.h:13</a></div></div>
+<a href="sistema_8h.html">Ir para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef SISTEMA_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define SISTEMA_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="usuario_8h.html">usuario.h</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="servidor_8h.html">servidor.h</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">using namespace </span>std;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="class_sistema.html">   11</a></span><span class="keyword">class </span><a class="code hl_class" href="class_sistema.html">Sistema</a> {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="class_sistema.html#ae78d572bce86f2bdc1b2a51d1ef290df">   13</a></span>    vector&lt;Servidor&gt; <a class="code hl_variable" href="class_sistema.html#ae78d572bce86f2bdc1b2a51d1ef290df">servers</a>; <span class="comment">//Vetor que armazena todos os servidores.</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="class_sistema.html#abb256581959e67fa9018bbbb7dee158f">   14</a></span>    vector&lt;Usuario&gt; <a class="code hl_variable" href="class_sistema.html#abb256581959e67fa9018bbbb7dee158f">usuarios</a>; <span class="comment">//Vetor que armazena os usuários cadastrados.</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="class_sistema.html#a5a4a1bd7139adcfb28f9a9e5b45a9ed9">   15</a></span>    map&lt;int,pair&lt;string,string&gt;&gt; <a class="code hl_variable" href="class_sistema.html#a5a4a1bd7139adcfb28f9a9e5b45a9ed9">usuarios_logados</a>; <span class="comment">//Vetor que armazena os usuários que logaram no sistema.</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_sistema.html#a817ea823866d39461d33070b767fc8e6">salvarUsuarios</a>();</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_sistema.html#a2c089769cc448b35ef28af4fc1edc8d6">salvarServidores</a>();</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_sistema.html#a118d16dc0bcefb5bbe29bdfd471def2c">salvar</a>();</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keywordtype">string</span> <a class="code hl_function" href="class_sistema.html#a8be98649e0b4b7bf3bbc24c4e8b1a434">quit</a>();</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordtype">string</span> <a class="code hl_function" href="class_sistema.html#a34c18659d7d8c1a54a46c9e11bdbc4b9">help</a>();</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordtype">string</span> <a class="code hl_function" href="class_sistema.html#a2debdfb0a127b261ae2587c20fb9db39">create_user</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> email, <span class="keyword">const</span> <span class="keywordtype">string</span> senha, <span class="keyword">const</span> <span class="keywordtype">string</span> nome);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordtype">string</span> <a class="code hl_function" href="class_sistema.html#a350e46f700f1347b63ef61a387745c20">login</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> email, <span class="keyword">const</span> <span class="keywordtype">string</span> senha);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordtype">string</span> <a class="code hl_function" href="class_sistema.html#a80cf7d0d273bf61dce95a0d67c3c89fc">disconnect</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keywordtype">string</span> <a class="code hl_function" href="class_sistema.html#abe6b5c9ec5b32f9139dedc6baeb417d4">create_server</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keyword">const</span> <span class="keywordtype">string</span> nome);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keywordtype">string</span> <a class="code hl_function" href="class_sistema.html#a24789e935e92267cdc3cedaa18375a46">set_server_invite_code</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keyword">const</span> <span class="keywordtype">string</span> nome, <span class="keyword">const</span> <span class="keywordtype">string</span> codigo);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keywordtype">string</span> <a class="code hl_function" href="class_sistema.html#a7831adb24c4201d094744bd16e14604f">set_server_desc</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keyword">const</span> <span class="keywordtype">string</span> nome, <span class="keyword">const</span> <span class="keywordtype">string</span> descricao);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="keywordtype">string</span> <a class="code hl_function" href="class_sistema.html#a1a6ba11512dba05914fdb21994073200">list_servers</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="keywordtype">string</span> <a class="code hl_function" href="class_sistema.html#ae5f0591792e2d927fdb8d56905c8c5ef">remove_server</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keyword">const</span> <span class="keywordtype">string</span> nome);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    <span class="keywordtype">string</span> <a class="code hl_function" href="class_sistema.html#adaae5a70b8a103c5882ed7ff6b4ed974">enter_server</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keyword">const</span> <span class="keywordtype">string</span> nome, <span class="keyword">const</span> <span class="keywordtype">string</span> codigo);</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <span class="keywordtype">string</span> <a class="code hl_function" href="class_sistema.html#a9a5d84e37afbfac4d77a70c02e63b023">leave_server</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keyword">const</span> <span class="keywordtype">string</span> nome);</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    <span class="keywordtype">string</span> <a class="code hl_function" href="class_sistema.html#ad0cd812736067c0276ae554780bd68a6">list_participants</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    <span class="keywordtype">string</span> <a class="code hl_function" href="class_sistema.html#af39569adbfa55a9a45a429946e19a6af">list_users</a>();</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    </div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    <span class="keywordtype">string</span> <a class="code hl_function" href="class_sistema.html#afedf814540154dc1a36f41ac67ca8204">list_channels</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    <span class="keywordtype">string</span> <a class="code hl_function" href="class_sistema.html#a105ff40b663f6c3dff86ec7d034487c8">create_channel</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keyword">const</span> <span class="keywordtype">string</span> nome);</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    <span class="keywordtype">string</span> <a class="code hl_function" href="class_sistema.html#a861954e024a15f7a326e7df0eee3f8ff">enter_channel</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keyword">const</span> <span class="keywordtype">string</span> nome);</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    <span class="keywordtype">string</span> <a class="code hl_function" href="class_sistema.html#a29acb5090f7ba4db6c438e2e092353d9">leave_channel</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span> </div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    <span class="keywordtype">string</span> <a class="code hl_function" href="class_sistema.html#a7bd98ff3ff6cff1ea2345938d214feb9">send_message</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keyword">const</span> <span class="keywordtype">string</span> mensagem);</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    </div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>    <span class="keywordtype">string</span> <a class="code hl_function" href="class_sistema.html#a0dd03bba017b7ae31fba2cefad953891">list_messages</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>};</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span> </div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclass_sistema_html"><div class="ttname"><a href="class_sistema.html">Sistema</a></div><div class="ttdef"><b>Definição</b> <a href="sistema_8h_source.html#l00011">sistema.h:11</a></div></div>
+<div class="ttc" id="aclass_sistema_html_a0dd03bba017b7ae31fba2cefad953891"><div class="ttname"><a href="class_sistema.html#a0dd03bba017b7ae31fba2cefad953891">Sistema::list_messages</a></div><div class="ttdeci">string list_messages(int id)</div><div class="ttdoc">Lista as mensagens de um canal.</div><div class="ttdef"><b>Definição</b> <a href="sistema_8cpp_source.html#l00426">sistema.cpp:426</a></div></div>
+<div class="ttc" id="aclass_sistema_html_a105ff40b663f6c3dff86ec7d034487c8"><div class="ttname"><a href="class_sistema.html#a105ff40b663f6c3dff86ec7d034487c8">Sistema::create_channel</a></div><div class="ttdeci">string create_channel(int id, const string nome)</div><div class="ttdoc">Cria um canal no servidor.</div><div class="ttdef"><b>Definição</b> <a href="sistema_8cpp_source.html#l00344">sistema.cpp:344</a></div></div>
+<div class="ttc" id="aclass_sistema_html_a118d16dc0bcefb5bbe29bdfd471def2c"><div class="ttname"><a href="class_sistema.html#a118d16dc0bcefb5bbe29bdfd471def2c">Sistema::salvar</a></div><div class="ttdeci">void salvar()</div><div class="ttdef"><b>Definição</b> <a href="sistema_8cpp_source.html#l00324">sistema.cpp:324</a></div></div>
+<div class="ttc" id="aclass_sistema_html_a1a6ba11512dba05914fdb21994073200"><div class="ttname"><a href="class_sistema.html#a1a6ba11512dba05914fdb21994073200">Sistema::list_servers</a></div><div class="ttdeci">string list_servers(int id)</div><div class="ttdoc">Função que lista os servidores cadastrados no sistema.</div><div class="ttdef"><b>Definição</b> <a href="sistema_8cpp_source.html#l00199">sistema.cpp:199</a></div></div>
+<div class="ttc" id="aclass_sistema_html_a24789e935e92267cdc3cedaa18375a46"><div class="ttname"><a href="class_sistema.html#a24789e935e92267cdc3cedaa18375a46">Sistema::set_server_invite_code</a></div><div class="ttdeci">string set_server_invite_code(int id, const string nome, const string codigo)</div><div class="ttdoc">Função que altera o código de convite de um servidor.</div><div class="ttdef"><b>Definição</b> <a href="sistema_8cpp_source.html#l00164">sistema.cpp:164</a></div></div>
+<div class="ttc" id="aclass_sistema_html_a29acb5090f7ba4db6c438e2e092353d9"><div class="ttname"><a href="class_sistema.html#a29acb5090f7ba4db6c438e2e092353d9">Sistema::leave_channel</a></div><div class="ttdeci">string leave_channel(int id)</div><div class="ttdoc">Remove o usuário do canal que ele está visualizando atualmente.</div><div class="ttdef"><b>Definição</b> <a href="sistema_8cpp_source.html#l00387">sistema.cpp:387</a></div></div>
+<div class="ttc" id="aclass_sistema_html_a2c089769cc448b35ef28af4fc1edc8d6"><div class="ttname"><a href="class_sistema.html#a2c089769cc448b35ef28af4fc1edc8d6">Sistema::salvarServidores</a></div><div class="ttdeci">void salvarServidores()</div><div class="ttdef"><b>Definição</b> <a href="sistema_8cpp_source.html#l00308">sistema.cpp:308</a></div></div>
+<div class="ttc" id="aclass_sistema_html_a2debdfb0a127b261ae2587c20fb9db39"><div class="ttname"><a href="class_sistema.html#a2debdfb0a127b261ae2587c20fb9db39">Sistema::create_user</a></div><div class="ttdeci">string create_user(const string email, const string senha, const string nome)</div><div class="ttdoc">Função que cria um usuario e retorna uma string com uma mensagem de sucesso ao criar ou um erro.</div><div class="ttdef"><b>Definição</b> <a href="sistema_8cpp_source.html#l00083">sistema.cpp:83</a></div></div>
+<div class="ttc" id="aclass_sistema_html_a34c18659d7d8c1a54a46c9e11bdbc4b9"><div class="ttname"><a href="class_sistema.html#a34c18659d7d8c1a54a46c9e11bdbc4b9">Sistema::help</a></div><div class="ttdeci">string help()</div><div class="ttdoc">Função que exibe a tela de ajuda.</div><div class="ttdef"><b>Definição</b> <a href="sistema_8cpp_source.html#l00056">sistema.cpp:56</a></div></div>
+<div class="ttc" id="aclass_sistema_html_a350e46f700f1347b63ef61a387745c20"><div class="ttname"><a href="class_sistema.html#a350e46f700f1347b63ef61a387745c20">Sistema::login</a></div><div class="ttdeci">string login(const string email, const string senha)</div><div class="ttdoc">Função que realiza o login do usuário com email e senha, retorna uma string de erro ou uma mensagem l...</div><div class="ttdef"><b>Definição</b> <a href="sistema_8cpp_source.html#l00100">sistema.cpp:100</a></div></div>
+<div class="ttc" id="aclass_sistema_html_a5a4a1bd7139adcfb28f9a9e5b45a9ed9"><div class="ttname"><a href="class_sistema.html#a5a4a1bd7139adcfb28f9a9e5b45a9ed9">Sistema::usuarios_logados</a></div><div class="ttdeci">map&lt; int, pair&lt; string, string &gt; &gt; usuarios_logados</div><div class="ttdef"><b>Definição</b> <a href="sistema_8h_source.html#l00015">sistema.h:15</a></div></div>
+<div class="ttc" id="aclass_sistema_html_a7831adb24c4201d094744bd16e14604f"><div class="ttname"><a href="class_sistema.html#a7831adb24c4201d094744bd16e14604f">Sistema::set_server_desc</a></div><div class="ttdeci">string set_server_desc(int id, const string nome, const string descricao)</div><div class="ttdoc">Função que altera a descrição do servidor para a descrição que o usuário escolher.</div><div class="ttdef"><b>Definição</b> <a href="sistema_8cpp_source.html#l00182">sistema.cpp:182</a></div></div>
+<div class="ttc" id="aclass_sistema_html_a7bd98ff3ff6cff1ea2345938d214feb9"><div class="ttname"><a href="class_sistema.html#a7bd98ff3ff6cff1ea2345938d214feb9">Sistema::send_message</a></div><div class="ttdeci">string send_message(int id, const string mensagem)</div><div class="ttdoc">Envia uma mensagem para o canal que o usuário está visualizando.</div><div class="ttdef"><b>Definição</b> <a href="sistema_8cpp_source.html#l00405">sistema.cpp:405</a></div></div>
+<div class="ttc" id="aclass_sistema_html_a80cf7d0d273bf61dce95a0d67c3c89fc"><div class="ttname"><a href="class_sistema.html#a80cf7d0d273bf61dce95a0d67c3c89fc">Sistema::disconnect</a></div><div class="ttdeci">string disconnect(int id)</div><div class="ttdoc">Função que desconecta um usuário específico do sistema, removendo a informação daquele usuário da tab...</div><div class="ttdef"><b>Definição</b> <a href="sistema_8cpp_source.html#l00117">sistema.cpp:117</a></div></div>
+<div class="ttc" id="aclass_sistema_html_a817ea823866d39461d33070b767fc8e6"><div class="ttname"><a href="class_sistema.html#a817ea823866d39461d33070b767fc8e6">Sistema::salvarUsuarios</a></div><div class="ttdeci">void salvarUsuarios()</div><div class="ttdef"><b>Definição</b> <a href="sistema_8cpp_source.html#l00293">sistema.cpp:293</a></div></div>
+<div class="ttc" id="aclass_sistema_html_a861954e024a15f7a326e7df0eee3f8ff"><div class="ttname"><a href="class_sistema.html#a861954e024a15f7a326e7df0eee3f8ff">Sistema::enter_channel</a></div><div class="ttdeci">string enter_channel(int id, const string nome)</div><div class="ttdef"><b>Definição</b> <a href="sistema_8cpp_source.html#l00365">sistema.cpp:365</a></div></div>
+<div class="ttc" id="aclass_sistema_html_a8be98649e0b4b7bf3bbc24c4e8b1a434"><div class="ttname"><a href="class_sistema.html#a8be98649e0b4b7bf3bbc24c4e8b1a434">Sistema::quit</a></div><div class="ttdeci">string quit()</div><div class="ttdoc">Função que termina o programa.</div><div class="ttdef"><b>Definição</b> <a href="sistema_8cpp_source.html#l00051">sistema.cpp:51</a></div></div>
+<div class="ttc" id="aclass_sistema_html_a9a5d84e37afbfac4d77a70c02e63b023"><div class="ttname"><a href="class_sistema.html#a9a5d84e37afbfac4d77a70c02e63b023">Sistema::leave_server</a></div><div class="ttdeci">string leave_server(int id, const string nome)</div><div class="ttdoc">Remove o usuário conectado do servidor que ele está logado.</div><div class="ttdef"><b>Definição</b> <a href="sistema_8cpp_source.html#l00234">sistema.cpp:234</a></div></div>
+<div class="ttc" id="aclass_sistema_html_abb256581959e67fa9018bbbb7dee158f"><div class="ttname"><a href="class_sistema.html#abb256581959e67fa9018bbbb7dee158f">Sistema::usuarios</a></div><div class="ttdeci">vector&lt; Usuario &gt; usuarios</div><div class="ttdef"><b>Definição</b> <a href="sistema_8h_source.html#l00014">sistema.h:14</a></div></div>
+<div class="ttc" id="aclass_sistema_html_abe6b5c9ec5b32f9139dedc6baeb417d4"><div class="ttname"><a href="class_sistema.html#abe6b5c9ec5b32f9139dedc6baeb417d4">Sistema::create_server</a></div><div class="ttdeci">string create_server(int id, const string nome)</div><div class="ttdoc">Função que gera um novo servidor e o adiciona a lista de servidores.</div><div class="ttdef"><b>Definição</b> <a href="sistema_8cpp_source.html#l00126">sistema.cpp:126</a></div></div>
+<div class="ttc" id="aclass_sistema_html_ad0cd812736067c0276ae554780bd68a6"><div class="ttname"><a href="class_sistema.html#ad0cd812736067c0276ae554780bd68a6">Sistema::list_participants</a></div><div class="ttdeci">string list_participants(int id)</div><div class="ttdoc">Função que lista os participantes de um servidor que esteja sendo visualizado.</div><div class="ttdef"><b>Definição</b> <a href="sistema_8cpp_source.html#l00258">sistema.cpp:258</a></div></div>
+<div class="ttc" id="aclass_sistema_html_adaae5a70b8a103c5882ed7ff6b4ed974"><div class="ttname"><a href="class_sistema.html#adaae5a70b8a103c5882ed7ff6b4ed974">Sistema::enter_server</a></div><div class="ttdeci">string enter_server(int id, const string nome, const string codigo)</div><div class="ttdoc">Função que adiciona o usuário logado ao servidor usando o id e o código (caso necessário).</div><div class="ttdef"><b>Definição</b> <a href="sistema_8cpp_source.html#l00212">sistema.cpp:212</a></div></div>
+<div class="ttc" id="aclass_sistema_html_ae5f0591792e2d927fdb8d56905c8c5ef"><div class="ttname"><a href="class_sistema.html#ae5f0591792e2d927fdb8d56905c8c5ef">Sistema::remove_server</a></div><div class="ttdeci">string remove_server(int id, const string nome)</div><div class="ttdoc">Função que remove um servidor da lista de servidores.</div><div class="ttdef"><b>Definição</b> <a href="sistema_8cpp_source.html#l00139">sistema.cpp:139</a></div></div>
+<div class="ttc" id="aclass_sistema_html_ae78d572bce86f2bdc1b2a51d1ef290df"><div class="ttname"><a href="class_sistema.html#ae78d572bce86f2bdc1b2a51d1ef290df">Sistema::servers</a></div><div class="ttdeci">vector&lt; Servidor &gt; servers</div><div class="ttdef"><b>Definição</b> <a href="sistema_8h_source.html#l00013">sistema.h:13</a></div></div>
+<div class="ttc" id="aclass_sistema_html_af39569adbfa55a9a45a429946e19a6af"><div class="ttname"><a href="class_sistema.html#af39569adbfa55a9a45a429946e19a6af">Sistema::list_users</a></div><div class="ttdeci">string list_users()</div><div class="ttdoc">Função que lista os usuários do sistema e se estão online ou offline.</div><div class="ttdef"><b>Definição</b> <a href="sistema_8cpp_source.html#l00273">sistema.cpp:273</a></div></div>
+<div class="ttc" id="aclass_sistema_html_afedf814540154dc1a36f41ac67ca8204"><div class="ttname"><a href="class_sistema.html#afedf814540154dc1a36f41ac67ca8204">Sistema::list_channels</a></div><div class="ttdeci">string list_channels(int id)</div><div class="ttdoc">Lista os canais do servidor que o usuário está visualizando.</div><div class="ttdef"><b>Definição</b> <a href="sistema_8cpp_source.html#l00329">sistema.cpp:329</a></div></div>
 <div class="ttc" id="aservidor_8h_html"><div class="ttname"><a href="servidor_8h.html">servidor.h</a></div></div>
 <div class="ttc" id="ausuario_8h_html"><div class="ttname"><a href="usuario_8h.html">usuario.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -158,7 +191,7 @@ $(document).ready(function(){initNavTree('sistema_8h_source.html',''); initResiz
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="sistema_8h.html">sistema.h</a></li>
-    <li class="footer">Gerado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Gerado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
   </ul>
 </div>
 </body>

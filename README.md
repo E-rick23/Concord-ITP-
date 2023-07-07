@@ -67,3 +67,11 @@ leave-channel <id> - Sai do canal.
 send-message <id> <mensagem> - Envia uma mensagem no canal atual.
 
 list-messages <id> - Lista todas as mensagens do canal.
+
+salvar - Salve os usuários e servidores registrados em arquivos.
+
+## Partes incompletas:
+
+A implementação da função de salvar servidores não foi concluída, o programa não salva canais e as respectivas mensagens neles, salvando apenas a quantidade de servidores, o id do dono, nome do servidor, descrição do servidor e código de convite.
+
+A implementação de carregar os servidores e usuários de um arquivo não foi realizada.

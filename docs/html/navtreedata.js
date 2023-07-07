@@ -31,7 +31,7 @@ var NAVTREE =
       ] ],
       [ "Lista de comandos disponíveis", "md__r_e_a_d_m_e.html#autotoc_md3", null ]
     ] ],
-    [ "Estruturas de Dados", "annotated.html", [
+    [ "Estruturas de dados", "annotated.html", [
       [ "Estruturas de Dados", "annotated.html", "annotated_dup" ],
       [ "Índice das Estruturas de Dados", "classes.html", null ],
       [ "Campos de Dados", "functions.html", [
@@ -42,7 +42,7 @@ var NAVTREE =
     ] ],
     [ "Arquivos", "files.html", [
       [ "Lista de Arquivos", "files.html", "files_dup" ],
-      [ "Ítens globais", "globals.html", [
+      [ "Globais", "globals.html", [
         [ "Todos", "globals.html", null ],
         [ "Funções", "globals_func.html", null ]
       ] ]

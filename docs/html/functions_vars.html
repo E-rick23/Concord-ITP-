@@ -1,9 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.7"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Concord: Campos de Dados - Variáveis</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -23,10 +23,9 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Concord
-   &#160;<span id="projectnumber">v0.2</span>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Concord<span id="projectnumber">&#160;v0.3</span>
    </div>
    <div id="projectbrief">Aplicativo de mensagens Concord!</div>
   </td>
@@ -35,21 +34,22 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Gerado por Doxygen 1.9.1 -->
+<!-- Gerado por Doxygen 1.9.7 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'Busca','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','Busca');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
@@ -63,7 +63,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(document).ready(function(){initNavTree('functions_vars.html',''); initResizable(); });
 /* @license-end */
 </script>
@@ -77,79 +77,46 @@ $(document).ready(function(){initNavTree('functions_vars.html',''); initResizabl
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="contents">
-&#160;<ul>
-<li>canais_texto
-: <a class="el" href="class_servidor.html#a939253ac052d53d27b211231534e58d9">Servidor</a>
-</li>
-<li>conteudo
-: <a class="el" href="class_mensagem.html#a5dfd53962d097abc59c82a4cdd24e91c">Mensagem</a>
-</li>
-<li>convite
-: <a class="el" href="class_servidor.html#a5e779500fff7d375d07130bd9e12e906">Servidor</a>
-</li>
-<li>data_hora
-: <a class="el" href="class_mensagem.html#aac2496803a83ee08c3f781b9f4f3491a">Mensagem</a>
-</li>
-<li>descricao
-: <a class="el" href="class_servidor.html#ac835192fb099563bd7248b2594be796d">Servidor</a>
-</li>
-<li>email
-: <a class="el" href="class_usuario.html#a0eead9437af68caf9dcf6e3cca88a178">Usuario</a>
-</li>
-<li>enviada_por
-: <a class="el" href="class_mensagem.html#ad6be58c915db50fc71408625ec5a86d8">Mensagem</a>
-</li>
-<li>id
-: <a class="el" href="class_usuario.html#aacd3685a7ff662db5c57e3e4433187ae">Usuario</a>
-</li>
-<li>mensagens
-: <a class="el" href="class_canal_texto.html#a429ad705000684d6d4d26534956b5f3e">CanalTexto</a>
-</li>
-<li>nome
-: <a class="el" href="class_canal_texto.html#acd2d7a41c685815fd57edd4dce67a3b8">CanalTexto</a>
-, <a class="el" href="class_servidor.html#afe5b8d9c020be2cdea189f3aa5958b2d">Servidor</a>
-, <a class="el" href="class_usuario.html#a655a3a99ebc056372a1653e9203b2b50">Usuario</a>
-</li>
-<li>participantes_id
-: <a class="el" href="class_servidor.html#a17680d994581e2bfb15aae2d4279b95c">Servidor</a>
-</li>
-<li>sair
-: <a class="el" href="classprincipal.html#ad70dbb4eae013b27ff19742caeb2b1be">principal</a>
-</li>
-<li>senha
-: <a class="el" href="class_usuario.html#a99d6b6876b9118121cb9171dde26cc44">Usuario</a>
-</li>
-<li>servers
-: <a class="el" href="class_sistema.html#ae78d572bce86f2bdc1b2a51d1ef290df">Sistema</a>
-</li>
-<li>sistema
-: <a class="el" href="classprincipal.html#a3d48acdd0c9a5736e5554b4f2f0e8f21">principal</a>
-</li>
-<li>ss
-: <a class="el" href="classprincipal.html#aa9e07f1b8f6f7b7d3a3ee96214b1822f">principal</a>
-</li>
-<li>usuario_dono_id
-: <a class="el" href="class_servidor.html#af617e27b21d1ee55adc5ec214f447733">Servidor</a>
-</li>
-<li>usuarios
-: <a class="el" href="class_sistema.html#abb256581959e67fa9018bbbb7dee158f">Sistema</a>
-</li>
-<li>usuarios_logados
-: <a class="el" href="class_sistema.html#a5a4a1bd7139adcfb28f9a9e5b45a9ed9">Sistema</a>
-</li>
+<div class="textblock">Esta é a list de todas as variáveis com links para a estrutura/união a que petencem:</div><ul>
+<li>canais_texto&#160;:&#160;<a class="el" href="class_servidor.html#a939253ac052d53d27b211231534e58d9">Servidor</a></li>
+<li>conteudo&#160;:&#160;<a class="el" href="class_mensagem.html#a5dfd53962d097abc59c82a4cdd24e91c">Mensagem</a></li>
+<li>convite&#160;:&#160;<a class="el" href="class_servidor.html#a5e779500fff7d375d07130bd9e12e906">Servidor</a></li>
+<li>data_hora&#160;:&#160;<a class="el" href="class_mensagem.html#aac2496803a83ee08c3f781b9f4f3491a">Mensagem</a></li>
+<li>descricao&#160;:&#160;<a class="el" href="class_servidor.html#ac835192fb099563bd7248b2594be796d">Servidor</a></li>
+<li>email&#160;:&#160;<a class="el" href="class_usuario.html#a0eead9437af68caf9dcf6e3cca88a178">Usuario</a></li>
+<li>enviada_por&#160;:&#160;<a class="el" href="class_mensagem.html#ad6be58c915db50fc71408625ec5a86d8">Mensagem</a></li>
+<li>id&#160;:&#160;<a class="el" href="class_usuario.html#aacd3685a7ff662db5c57e3e4433187ae">Usuario</a></li>
+<li>mensagens&#160;:&#160;<a class="el" href="class_canal_texto.html#a429ad705000684d6d4d26534956b5f3e">CanalTexto</a></li>
+<li>nome&#160;:&#160;<a class="el" href="class_canal_texto.html#acd2d7a41c685815fd57edd4dce67a3b8">CanalTexto</a>, <a class="el" href="class_servidor.html#afe5b8d9c020be2cdea189f3aa5958b2d">Servidor</a>, <a class="el" href="class_usuario.html#a655a3a99ebc056372a1653e9203b2b50">Usuario</a></li>
+<li>participantes_id&#160;:&#160;<a class="el" href="class_servidor.html#a17680d994581e2bfb15aae2d4279b95c">Servidor</a></li>
+<li>sair&#160;:&#160;<a class="el" href="classprincipal.html#ad70dbb4eae013b27ff19742caeb2b1be">principal</a></li>
+<li>senha&#160;:&#160;<a class="el" href="class_usuario.html#a99d6b6876b9118121cb9171dde26cc44">Usuario</a></li>
+<li>servers&#160;:&#160;<a class="el" href="class_sistema.html#ae78d572bce86f2bdc1b2a51d1ef290df">Sistema</a></li>
+<li>sistema&#160;:&#160;<a class="el" href="classprincipal.html#a3d48acdd0c9a5736e5554b4f2f0e8f21">principal</a></li>
+<li>ss&#160;:&#160;<a class="el" href="classprincipal.html#aa9e07f1b8f6f7b7d3a3ee96214b1822f">principal</a></li>
+<li>usuario_dono_id&#160;:&#160;<a class="el" href="class_servidor.html#af617e27b21d1ee55adc5ec214f447733">Servidor</a></li>
+<li>usuarios&#160;:&#160;<a class="el" href="class_sistema.html#abb256581959e67fa9018bbbb7dee158f">Sistema</a></li>
+<li>usuarios_logados&#160;:&#160;<a class="el" href="class_sistema.html#a5a4a1bd7139adcfb28f9a9e5b45a9ed9">Sistema</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Gerado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Gerado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
   </ul>
 </div>
 </body>
